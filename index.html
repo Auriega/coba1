@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buat Doi</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #ffe6e6;
+      padding-top: 100px;
+    }
+
+    .popup {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+      display: inline-block;
+      padding: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    #yesBtn {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #cccccc;
+      color: black;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="popup">
+    <h2>kamu ga sayang aku?? 🥺</h2>
+    <button id="yesBtn">ya</button>
+    <button id="noBtn">gak lah</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 100));
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
+    document.getElementById("yesBtn").addEventListener("click", () => {
+      alert("aku juga sayang kamu ky! ❤️ AOWWKWOK BACOT");
+    });
+  </script>
+
+</body>
+</html>
